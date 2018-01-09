@@ -17,8 +17,13 @@ export default {
 <style>
 *{
   margin: 0px;
-  padding:0px
+  padding:0px;
+  text-decoration: none;
 }
-
-
+a{
+  color: darkgrey;
+}
+a:hover {
+  color: rgb(104, 199, 167);
+}
 </style>

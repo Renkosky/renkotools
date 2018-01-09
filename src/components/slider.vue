@@ -23,6 +23,7 @@
 </template>
 <script>
 export default {
+  name: 'slider',
   props: {
     inv: {
       type: Number,
@@ -63,7 +64,6 @@ export default {
       setTimeout(() => {
         this.isShow = true
         this.nowIndex = index
-      //  this.$emit('onchange',index)
       }, 10)
     },
     runInv () {

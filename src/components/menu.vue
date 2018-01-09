@@ -4,18 +4,20 @@
     <div class="title"></div>
     <div class="content">
       <div class="sections">
-          <router-link class="sections-item" to="/slider">slider</router-link>
-          <router-link class="sections-item" to="/switch">swith</router-link>
-          <router-link class="sections-item">...</router-link>
+          <router-link  to="/slider" class="sections-item"><li>slider</li></router-link>
+          <router-link  to="/switch" class="sections-item" >swith</router-link>
+          <router-link  to="/stars" class="sections-item">stars</router-link>
       </div>
-      <router-view></router-view>
+      <div class="demo">
+        <router-view></router-view>
+      </div>
     </div>
     
  </div>
 </template>
 <script>
 export default {
-  name: 'menu'
+  name: 'rn-menu'
 }
 </script>
 <style scoped>
@@ -35,20 +37,29 @@ export default {
     display: flex;
     height: 93%;
 }
+.demo{
+    margin: 60px;
+}
 .sections{
     display: flex;
     flex-direction: column;
-    margin-right: 50px;
-    width: 200px; 
+    width: 210px; 
     height: 100%;
     border-right: 1px solid #b4b4b498
 }
 .sections-item{
     flex: 0 1 auto;
     text-align: center;
-    padding: 15px 15px 15px 15px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #b4b4b4;
+    padding: 10px;
     font-size: 20px;
+    border-right:4px solid rgba(83, 214, 127, 0)
+}
+.router-link-active{
+    background-color: rgba(145, 229, 201, 0.5);
+    color:rgb(0, 151, 88);
+    border-right:4px solid rgb(83, 214, 127)
+}
+li{
+    list-style: none;
 }
 </style>

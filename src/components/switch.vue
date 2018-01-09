@@ -1,15 +1,16 @@
 <template>
-  <span id="Sswitch" @click="changeMe" :style="{'backgroundColor':outColor}">
+  <span id="Sswitch" @click="change" :style="{'backgroundColor':barcolor}">
     <span class="cicle" :style="{'backgroundColor':inColor}"></span>
   </span>
 </template>
 
 <script>
 export default {
-  name: 'Switch',
+  name: 'rn-Switch',
   data () {
     return {
-      flag: true
+      flag: true,
+      barcolor: this.outColor
     }
   },
   props: {
@@ -19,16 +20,18 @@ export default {
     },
     outColor: {
       type: String,
-      default: '#9F9F9F'
+      default: 'grey'
     }
   },
   methods: {
-    changeMe () {
+    change () {
       this.flag = !this.flag
       if (this.flag) {
-        document.querySelector('#Sswitch>.cicle').className = 'cicle left'
+        document.querySelector('#Sswitch>.cicle').className = 'cicle off'
+        this.barcolor = 'grey'
       } else {
-        document.querySelector('#Sswitch>.cicle').className = 'cicle right'
+        document.querySelector('#Sswitch>.cicle').className = 'cicle on'
+        this.barcolor = 'rgb(24, 24, 24)'
       }
     }
   }
@@ -54,10 +57,10 @@ export default {
   transition: transform .3s;
   transform: translate(3px, 3px);
 }
-.right {
+.on {
   transform: translate(25px, 3px);
 }
-.left {
+.off {
   transform: translate(3px, 3px);
 }
 </style>
