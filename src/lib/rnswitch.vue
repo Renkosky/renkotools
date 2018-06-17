@@ -1,12 +1,12 @@
 <template>
   <span id="Sswitch" @click="change" :style="{'backgroundColor':barcolor}">
-    <span class="cicle" :style="{'backgroundColor':inColor}"></span>
+    <span :class="{cicle:true, 'on':defaultChecked}" :style="{'backgroundColor':inColor}"></span>
   </span>
 </template>
 
 <script>
 export default {
-  name: 'rn-Switch',
+  name: 'rnswitch',
   data () {
     return {
       flag: true,
@@ -21,6 +21,10 @@ export default {
     outColor: {
       type: String,
       default: 'grey'
+    },
+    defaultChecked: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {

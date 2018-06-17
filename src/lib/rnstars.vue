@@ -8,12 +8,17 @@
 </template>
 <script>
 export default {
-  name: 'rn-stars',
+  name: 'rnstars',
   data () {
     return {
-      num: 5,
       nowIndex: -1,
       stars: 0
+    }
+  },
+  props: {
+    num: {
+      type: Number,
+      default: 5
     }
   },
   methods: {
@@ -23,7 +28,6 @@ export default {
     getnums () {
       if (this.nowIndex >= 0) {
         this.stars = this.num - this.nowIndex
-        console.log(this.stars)
         return this.stars
       }
     }

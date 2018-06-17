@@ -2,8 +2,12 @@
   "name": "renkotools",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "Renko <philsky28@gmail.com>",
-  "private": true,
+  "author": "renkosky <philsky28@gmail.com>",
+  "private": false,
+  "license": "MIT",
+   "main": "dist/renkotools.js",
+   "repository": { "type": "git", "url": "https://github.com/yucccc/vue-pay-keyboard" },
+
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",

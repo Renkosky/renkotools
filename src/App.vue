@@ -1,16 +1,13 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <rnswitch></rnswitch>
+    <rnstars :num='3'></rnstars>
   </div>
 </template>
 
 <script>
-import menu from './components/menu'
 export default {
-  name: 'app',
-  components: {
-    menu
-  }
+  name: 'app'
 }
 </script>
 
