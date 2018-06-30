@@ -1,21 +1,40 @@
 # renkotools
 
-> A Vue.js project
+A simple vue2.0 Component library
 
-## Build Setup
+## Components
 
-``` bash
-# install dependencies
-npm install
+### 1.rnStars
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+```javascript
+<rnStars :num='3'></rnStars>
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+| propsName |  type  |                        description |
+| --------- | :----: | ---------------------------------: |
+| num       | number | the numbers of stars(default is 5) |
+
+### 2.rnSwitch
+
+```javascript
+<rnSwitch />
+```
+
+| propsName      |  type   |                  description |
+| -------------- | :-----: | ---------------------------: |
+| btnColor       | string  |    the color of switchbutton |
+| btnColor       | string  | switchbar's background color |
+| defaultChecked | boolean |     initial status of switch |
+
+### 3. rnToast
+
+```javascript
+ <button @click='toast'>click</button></button>
+
+
+ methods: {
+    toast () {
+      rnToast('Toast test')
+    }
+  }
+```

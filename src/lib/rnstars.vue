@@ -8,7 +8,7 @@
 </template>
 <script>
 export default {
-  name: 'rnstars',
+  name: 'rnStars',
   data () {
     return {
       nowIndex: -1,

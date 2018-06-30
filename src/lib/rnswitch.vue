@@ -1,24 +1,24 @@
 <template>
-  <span id="Sswitch" @click="change" :style="{'backgroundColor':barcolor}">
-    <span :class="{cicle:true, 'on':defaultChecked}" :style="{'backgroundColor':inColor}"></span>
+  <span id="rnSwitch" @click="change" :style="{'backgroundColor':barcolor}">
+    <span :class="{cicle:true, 'on':defaultChecked}" :style="{'backgroundColor':btnColor}"></span>
   </span>
 </template>
 
 <script>
 export default {
-  name: 'rnswitch',
+  name: 'rnSwitch',
   data () {
     return {
       flag: true,
-      barcolor: this.outColor
+      barcolor: this.bgColor
     }
   },
   props: {
-    inColor: {
+    btnColor: {
       type: String,
       default: 'white'
     },
-    outColor: {
+    bgColor: {
       type: String,
       default: 'grey'
     },
@@ -31,10 +31,10 @@ export default {
     change () {
       this.flag = !this.flag
       if (this.flag) {
-        document.querySelector('#Sswitch>.cicle').className = 'cicle off'
+        document.querySelector('#rnSwitch>.cicle').className = 'cicle off'
         this.barcolor = 'grey'
       } else {
-        document.querySelector('#Sswitch>.cicle').className = 'cicle on'
+        document.querySelector('#rnSwitch>.cicle').className = 'cicle on'
         this.barcolor = 'rgb(24, 24, 24)'
       }
     }
@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style scoped>
-#Sswitch{
+#rnSwitch {
   display: inline-block;
   width: 44px;
   height: 22px;
@@ -51,14 +51,14 @@ export default {
   bottom: -5px;
   border-radius: 15px;
 }
-.cicle{
+.cicle {
   top: 0;
   left: 0;
   position: absolute;
   border-radius: 100%;
   width: 16px;
   height: 16px;
-  transition: transform .3s;
+  transition: transform 0.3s;
   transform: translate(3px, 3px);
 }
 .on {

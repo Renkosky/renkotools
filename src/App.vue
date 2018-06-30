@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <rnswitch></rnswitch>
-    <rnstars :num='3'></rnstars>
-    <button @click='a'>点击1</button>
+    <rnSwitch></rnSwitch>
+    <rnStars :num='3'></rnStars>
+    <button @click='toast'>点击1</button>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ import rnToast from './lib/rnToast/rnToast.js'
 export default {
   name: 'app',
   methods: {
-    a () {
+    toast () {
       rnToast('Toast test')
     }
   }
